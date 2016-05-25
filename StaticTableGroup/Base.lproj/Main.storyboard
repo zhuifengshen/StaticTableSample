@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--View Controller-->
         <scene sceneID="KrN-9F-6T8">
             <objects>
-                <tableViewController id="fC2-HW-vt8" sceneMemberID="viewController">
+                <tableViewController id="fC2-HW-vt8" customClass="ViewController" customModule="StaticTableGroup" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Jg1-KJ-8GN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,6 +118,12 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCH-YR-Ott">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                     <state key="normal" title="登录"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="25" y="7" width="367" height="30"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="login:" destination="fC2-HW-vt8" eventType="touchUpInside" id="vQv-st-F72"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -200,10 +206,14 @@
                             <outlet property="delegate" destination="fC2-HW-vt8" id="70e-c7-QGN"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="txtPassword" destination="NUb-Cc-l95" id="HIS-dT-J5p"/>
+                        <outlet property="txtUserName" destination="alz-DK-ydH" id="gTs-5t-M6d"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lnm-jo-PkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="484.5" y="387"/>
+            <point key="canvasLocation" x="417" y="387"/>
         </scene>
     </scenes>
 </document>
